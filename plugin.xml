@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="de.octogate.certlist" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CertList</name>
+    <js-module name="CertList" src="www/CertList.js">
+        <clobbers target="CertList" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CertList">
+                <param name="android-package" value="de.octogate.plugin.CertList"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CertList.java" target-dir="src/de/octogate/plugin/"/>
+        <asset src="crt/OctoGateCA.crt" target="crt/OctoGateCA.crt" />
+    </platform>
+</plugin>
