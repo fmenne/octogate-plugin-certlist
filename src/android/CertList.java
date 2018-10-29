@@ -61,7 +61,8 @@ public class CertList extends CordovaPlugin {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(KeyChain.EXTRA_NAME, "OctoGate");
             intent.putExtra(KeyChain.EXTRA_CERTIFICATE, cert);
-            this.cordova.getContext().startActivity(intent);
+			Context ctx=this.cordova.getActivity().getApplicationContext();
+			ctx.startActivity(intent);	
             callbackContext.success();
 
         } catch (Exception e) {

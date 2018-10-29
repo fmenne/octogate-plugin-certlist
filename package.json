@@ -1,6 +1,6 @@
 {
   "name": "octogate-plugin-certlist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch certificates from android\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dand install \u001b[2~cert\u001b[2~ificates from androids cert store.",
   "main": "index.js",
   "scripts": {
