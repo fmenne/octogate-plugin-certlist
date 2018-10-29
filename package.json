@@ -1,0 +1,19 @@
+{
+  "name": "octogate-plugin-certlist",
+  "version": "1.0.0",
+  "description": "Fetch certificates from android\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dand install \u001b[2~cert\u001b[2~ificates from androids cert store.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmenne/octogate-plugin-certlist.git"
+  },
+  "author": "OctoGate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmenne/octogate-plugin-certlist/issues"
+  },
+  "homepage": "https://github.com/fmenne/octogate-plugin-certlist#readme"
+}
