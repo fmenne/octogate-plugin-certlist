@@ -20,8 +20,18 @@ public class CertList extends CordovaPlugin {
             this.getCertList(callbackContext);
             return true;
         } else if (action.equals("install")) {
-            this.installCert(callbackContext);
-            return true;
+            if (args.size() == 1) {
+                String certName = args.getString(0, "");
+                if (certName.isEmpty()) {
+                    callbackContext.error("Invalid arguments. Expected certName");
+                    return  false;
+                }
+                this.installCert(callbackContext, certName);
+                return true;
+            } else {
+                callbackContext.error("Invalid arguments. Expected certName");
+                return false;
+            }
         }
 
         return false;
@@ -48,18 +58,18 @@ public class CertList extends CordovaPlugin {
         callbackContext.success(list);
     }
 
-    private void installCert(CallbackContext callbackContext) {
+    private void installCert(CallbackContext callbackContext, String certName) {
         AssetManager assets = this.cordova.getActivity().getAssets();
         try {
             //String[] lst = assets.list("www/crt/OctoGateCA.crt");
-            InputStream certStream =  assets.open("www/crt/OctoGateCA.crt");
+            InputStream certStream =  assets.open(String.format("www/crt/%s.crt", certName));
 
             byte[] cert = new byte[certStream.available()];
             certStream.read(cert);
 
             Intent intent = KeyChain.createInstallIntent();
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.putExtra(KeyChain.EXTRA_NAME, "OctoGate");
+            intent.putExtra(KeyChain.EXTRA_NAME, certName);
             intent.putExtra(KeyChain.EXTRA_CERTIFICATE, cert);
 			this.cordova.getActivity().getApplicationContext().startActivity(intent);	
             callbackContext.success();

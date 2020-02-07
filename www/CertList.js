@@ -6,8 +6,8 @@ exports.getList = function () {
     });
 };
 
-exports.installCert =  function() {
+exports.installCert =  function(certName) {
     return new Promise((resolve, reject) => {
-        exec(resolve, reject, 'CertList', 'install', []);
+        exec(resolve, reject, 'CertList', 'install', [certName]);
     });
 }
