@@ -14,6 +14,6 @@
 
         <source-file src="src/android/CertList.java" target-dir="src/de/octogate/plugin/"/>
         <asset src="crt/OctoGateCA.crt" target="crt/OctoGateCA.crt" />
-        <asset src="crt/OctoGateCAv2.crt" target="crt/OctoGateCAv2.crt" />
+        <asset src="crt/OctoGate_v20.crt" target="crt/OctoGate_v20.crt" />
     </platform>
 </plugin>
