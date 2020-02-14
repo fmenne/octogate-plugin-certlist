@@ -20,8 +20,8 @@ public class CertList extends CordovaPlugin {
             this.getCertList(callbackContext);
             return true;
         } else if (action.equals("install")) {
-            if (args.size() == 1) {
-                String certName = args.getString(0, "");
+            if (args.length() == 1) {
+                String certName = args.getString(0);
                 if (certName.isEmpty()) {
                     callbackContext.error("Invalid arguments. Expected certName");
                     return  false;
