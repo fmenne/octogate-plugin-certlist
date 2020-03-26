@@ -13,7 +13,7 @@
         </config-file>
 
         <source-file src="src/android/CertList.java" target-dir="src/de/octogate/plugin/"/>
-        <asset src="crt/OctoGate.crt" target="crt/OctoGateCA.crt" />
+        <asset src="crt/OctoGate.crt" target="crt/OctoGate.crt" />
         <asset src="crt/OctoGate_v20.crt" target="crt/OctoGate_v20.crt" />
     </platform>
 </plugin>
